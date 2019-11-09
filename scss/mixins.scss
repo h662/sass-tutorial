@@ -23,7 +23,9 @@
 }
 
 @mixin clearFix {
-  &:hover {
-    background: #333;
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
   }
 }
