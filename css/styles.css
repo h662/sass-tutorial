@@ -43,12 +43,17 @@ li {
   #main-nav li {
     float: left;
     width: 16.66667%; }
+    @media screen and (max-width: 600px) {
+      #main-nav li {
+        width: 100%; } }
   #main-nav a {
     color: #f8f9fb;
     text-decoration: none;
     padding: 16px;
     display: block;
     text-align: center; }
+    #main-nav a:hover {
+      background: #04455b; }
   #main-nav:after {
     content: "";
     display: block;
@@ -120,8 +125,18 @@ section h1 {
     color: #032f3e;
     font-weight: bold; }
     #services a:hover {
-      color: red; }
+      color: #3e1203; }
   #services ul:after {
     content: "";
     display: block;
     clear: both; }
+
+#projects li {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 15%; }
+  #projects li:nth-child(6n) {
+    margin-right: 0; }
+  #projects li img {
+    width: 100%; }

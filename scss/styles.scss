@@ -10,6 +10,9 @@
   li {
     float: left;
     width: (100% / 6);
+    @include mQ(600px) {
+      width: 100%;
+    }
   }
   a {
     color: $offWhite;
@@ -17,6 +20,9 @@
     padding: 16px;
     display: block;
     text-align: center;
+    &:hover {
+      background: lighten($deepBlue, 6);
+    }
   }
 
   @include clearFix;
@@ -62,10 +68,17 @@ section h1 {
     color: $deepBlue;
     font-weight: bold;
     &:hover {
-      color: red;
+      color: complement($deepBlue);
     }
   }
   ul {
     @include clearFix;
+  }
+}
+
+#projects li {
+  @include grid(6, 2%);
+  img {
+    width: 100%;
   }
 }
